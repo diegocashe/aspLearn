@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply font-medium py-2 px-3 border-2 border-transparent rounded-sm shadow-md hover:ring-2 focus:ring-2 transition-all duration-300 ease-in-out
+}
+
+.btn-large {
+  @apply font-medium py-3 px-4 border-2 border-transparent rounded-sm shadow-md hover:ring-2 focus:ring-2 transition-all duration-300 ease-in-out
+}
+
+.btn-small {
+  @apply font-medium py-1 px-2 border-2 border-transparent rounded-sm shadow-md hover:ring-2 focus:ring-2 transition-all duration-300 ease-in-out
+}
+
+.btn-primary {
+  @apply bg-amber-400 text-white hover:ring-amber-600 hover:bg-amber-300 active:border-amber-600 active:bg-amber-600 active:shadow-none focus:border-amber-600 focus:ring-amber-600
+}
+
+.btn-secondary {
+  @apply bg-orange-500 text-white hover:ring-orange-600 hover:bg-orange-300 active:border-orange-700 active:bg-orange-700 active:shadow-none focus:border-orange-600 focus:ring-orange-600
+}
+
+.btn-success {
+  @apply bg-green-500 text-white hover:ring-green-600 hover:bg-green-300 active:border-green-700 active:bg-green-700 active:shadow-none focus:border-green-600 focus:ring-green-600
+}
+
+.btn-alert {
+  @apply bg-red-500 text-white hover:ring-red-600 hover:bg-red-300 active:border-red-700 active:bg-red-700 active:shadow-none focus:border-red-600 focus:ring-red-600
+}
+
+.btn-info {
+  @apply bg-sky-500 text-white hover:ring-sky-600 hover:bg-sky-300 active:border-sky-700 active:bg-sky-700 active:shadow-none focus:border-sky-600 focus:ring-sky-600
+}
+
+.btn-light {
+  @apply bg-gray-100 text-gray-900 hover:ring-gray-300 hover:bg-gray-200 active:border-gray-400 active:bg-gray-400 active:shadow-none focus:border-gray-300 focus:ring-gray-300
+}
+
+.btn-special {
+  @apply text-white rounded-full w-full px-5 py-2 ring-4 ring-transparent bg-gradient-to-r from-blue-600 via-blue-400 to-sky-400 hover:ring-blue-400 transition-all duration-500 after:border-none
+}
+.gradient{
+  @apply bg-gradient-to-r from-orange-500  to-yellow-400
+}
+
+nav {
+  @apply pt-5 shadow-md sm:pt-3 px-10 pb-3 sm:pb-0
+}
+
+.nav-container {
+  @apply w-full mx-auto flex flex-col items-center mr-auto sm:pt-0 sm:flex-row sm:h-auto justify-between m-0
+}
+
+.nav-options-container {
+  @apply flex justify-between border-b-2 border-transparent space-x-4 
+}
+
+.nav-options-container li {
+  @apply sm:py-4 sm:inline-block
+}
+
+nav a {
+  @apply relative after:border-blue-500 after:origin-left after:transition-all after:duration-300 after:scale-x-0 after:top-1 after:border-b-2 after:absolute after:w-full after:h-full after:left-0 after:-translate-x-0 hover:after:scale-x-100 transition-all duration-500
+}
+
+nav a.active {
+    @apply relative after:scale-x-100 after:border-blue-500 after:top-1 after:border-b-2 after:absolute after:w-full after:h-full after:left-0 hover:after:border-sky-500 transition-all duration-500
+}
+
+.nav-arrow-toggle {
+  @apply transition-all duration-200 h-6 w-6 text-black
+}
+
+.nav-arrow-toggle:focus, .nav-arrow-toggle:active {
+    transform: rotateX(180deg)
+}
+.rotateX{
+    transform: rotateX(180deg)
+} 
+.toggle-smenu {
+    @apply block sm:hidden;
+}
+.item-icon{
+    @apply flex flex-row
+}
+section{
+  @apply my-2 sm:my-10
+}
+.triangle{
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  border-radius: 0px 190px 0px 0px;
+}
+
+.input {
+  transition: border 0.2s ease-in-out;
+  min-width: 280px
+}
+
+.tab {
+            overflow: hidden;
+            }
+            .tab-content {
+            max-height: 0;
+            transition: all 0.5s;
+            }
+            input:checked + .tab-label .test {
+                background-color: #000;
+            }
+            input:checked + .tab-label .test svg {
+                transform: rotate(180deg);
+                stroke: #fff;
+            }
+            input:checked + .tab-label::after {
+            transform: rotate(90deg);
+            }
+            input:checked ~ .tab-content {
+            max-height: 100vh;
+            }
